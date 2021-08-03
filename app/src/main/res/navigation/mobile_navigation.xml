@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@id/home">
+
+    <fragment
+        android:id="@+id/home"
+        android:name="com.example.calculadoraimcmvvm.ui.home.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home">
+        <action
+            android:id="@+id/action_home_to_imcFragment2"
+            app:destination="@id/imcFragment"
+            app:popUpTo="@id/home" />
+        <action
+            android:id="@+id/action_home_to_gastoViagem"
+            app:destination="@id/gastoViagem"
+            app:popUpTo="@id/home" />
+        <action
+            android:id="@+id/action_home_to_notaDoAluno"
+            app:destination="@id/notaDoAluno"
+            app:popUpTo="@id/home" />
+        <action
+                android:id="@+id/action_home_to_listaAluno"
+                app:destination="@id/listaAluno" />
+    </fragment>
+    <fragment
+        android:id="@+id/imcFragment"
+        android:name="com.example.calculadoraimcmvvm.ui.imc.TelaImc"
+        android:label="fragment_tela_imc"
+        tools:layout="@layout/fragment_tela_imc" />
+    <fragment
+        android:id="@+id/gastoViagem"
+        android:name="com.example.calculadoraimcmvvm.ui.gastoviagem.GastoViagem"
+        android:label="fragment_gasto_viagem"
+        tools:layout="@layout/fragment_gasto_viagem" />
+    <fragment
+        android:id="@+id/notaDoAluno"
+        android:name="com.example.calculadoraimcmvvm.ui.notaaluno.NotaDoAluno"
+        android:label="fragment_nota_do_a_luno"
+        tools:layout="@layout/fragment_nota_do_aluno" />
+    <fragment
+            android:id="@+id/listaAluno"
+            android:name="com.example.calculadoraimcmvvm.ui.listaaluno.ListaAluno"
+            android:label="ListaAluno" />
+
+</navigation>
